@@ -13,9 +13,9 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /var/www/html/${ghprbSourceBranch}
+     destination: /var/www/html/${ghprbActualCommitAuthor}
 permissions:
-   - object: /var/www/html/${ghprbSourceBranch}
+   - object: /var/www/html/${ghprbActualCommitAuthor}
      owner: ec2-user
      group: ec2-user
      mode: 775
@@ -24,7 +24,7 @@ permissions:
        - directory
 hooks:
    BeforeInstall:
-    - location: scripts/stopapache.sh
+    - location: scripts/before.sh
    AfterInstall:
-    - location: scripts/startapache.sh
+    - location: scripts/after.sh
 EOL
