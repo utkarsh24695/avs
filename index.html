@@ -4,7 +4,7 @@ sdhfjkdshlf
 asdkfghds
 jdsljkfsdhs
 ooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOooooooooooooooooooooooooooooooooooooooooo
-sudo mysql -e "ALTER USER 'root'@'localhost' 
+sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password 
 
 
 
@@ -20,7 +20,7 @@ permissions:
      group: ec2-user
      mode: 775
      type:
-       - file
+       - fileasSDASDSA
        - directory
 hooks:
    BeforeInstall:
